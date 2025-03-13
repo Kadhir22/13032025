@@ -5,7 +5,7 @@ FROM ubuntu:latest
 RUN apt update && apt install -y apache2
 
 # Copy the HTML file to the Apache web root
-COPY . /var/www/html/index.html
+COPY . /var/www/html/
 
 # Expose port 80 for HTTP traffic
 EXPOSE 80
