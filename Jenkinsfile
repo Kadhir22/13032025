@@ -17,6 +17,7 @@ pipeline {
                 )]) {
                     sh 'docker build -t index .'
                     sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
+                    sh 'docker tag index kadhir22/demo'
                     sh 'docker push kadhir22/demo'
                     sh 'docker rmi kadhir22/demo'
                 }
