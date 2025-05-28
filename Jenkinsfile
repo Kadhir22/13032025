@@ -11,7 +11,7 @@ pipeline {
         stage('Containerization') {
             steps {
                 withCredentials([usernamePassword(
-                    credentialsId: 'dochub-crd',
+                    credentialsId: 'dochub-cred',
                     usernameVariable: 'DOCKER_USER',
                     passwordVariable: 'DOCKER_PASS'
                 )]) {
