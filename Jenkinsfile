@@ -17,3 +17,4 @@ node('cicd'){
         sh "kubectl rollout restart deployment demo"
     }
  }
+}
