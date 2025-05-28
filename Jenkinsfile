@@ -5,6 +5,7 @@ def call(String) {
         }
 
         stage('Containerization') {
+            steps{
             withCredentials([usernamePassword(
                 credentialsId: 'dochub-crd', 
                 usernameVariable: 'DOCKER_USER', 
@@ -15,6 +16,7 @@ def call(String) {
                 sh "docker push kadhir22/demo"
                 sh "docker rmi kadhir22/demo"
             }
+            }    
         }
 
         stage('Cleanup Workspace') {
